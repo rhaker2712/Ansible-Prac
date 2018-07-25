@@ -1,7 +1,0 @@
----
-- hosts: localhost
-  tasks:
-      - name: create file
-        file:
-            path: /tmp/pink
-            state: touch
