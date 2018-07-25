@@ -1,0 +1,19 @@
+- name: Create Azure VM
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Create VM
+    azure_rm_virtualmachine:
+      resource_group: rt_test
+      name: myVM
+      vm_size: Standard_B1s
+      admin_username: rthaker
+      ssh_password_enabled: false
+      ssh_public_keys:
+        - path: /home/rthaker/.ssh/authorized_keys
+          key_data: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDqOrD3oDd4cCdHerwo8d+oUXa3Bv48kVwhdgSaUAXSK513xH6TGcp7e6AWSe3JGoR/rOuirkewbH04YBuXlcIhBZ0eXRGwD9z5yeQLQ6edoRU/OPN+OztCtMj2imqEjQrK8DU7HD7CkB4L17WpkVewUqM1QcyLz3Tcr9bSX3bd/FmSB/7rm8QfepMCftTledH5zer6su5wjSmYnXnnSnHDBekZ7vsfJDxXiDjt7dXz75LDBT9mDlmLYuQOf6f5Dw916lEEPexZQy3EXQGTm043EFazhZTl4e6+uqIM54mLwFmkEuAsOvZECZnZvuklQQvzw4xz96vszyuBpJHhnldP rthaker@rthaker-VirtualBox"
+      image:
+        offer: CentOS
+        publisher: OpenLogic
+        sku: '7.5'
+        version: latest
