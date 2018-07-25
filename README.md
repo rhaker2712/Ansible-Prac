@@ -15,9 +15,9 @@ To manage Azure resources with Ansible, you need the following:
 
 ## Create supporting Azure resources
   
-  * $ az group create --name rt_test --location eastus
-  * $ az network vnet create --resource-group rt_test --name myVnet  --address-prefix 10.0.0.0/16 --subnet-name mySubnet --subnet-prefix 10.0.1.0/24
+  * `$ az group create --name rt_test --location eastus`
+  * `$ az network vnet create --resource-group rt_test --name myVnet  --address-prefix 10.0.0.0/16 --subnet-name mySubnet --subnet-prefix 10.0.1.0/24`
   
  ## Create and run Ansible playbook
   
-  * $ ansible-playbook azure_create_vm.yml
+  * `$ ansible-playbook azure_create_vm.yml`
