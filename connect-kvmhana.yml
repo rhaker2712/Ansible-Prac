@@ -1,0 +1,7 @@
+---
+- hosts: kvmhanas
+  tasks:
+      - name: Create file
+        file:
+            path: /tmp/yallo
+            state: touch

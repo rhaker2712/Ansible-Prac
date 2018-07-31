@@ -1,0 +1,9 @@
+kvmhanas:
+  hosts:
+    192.168.182.240:
+    192.168.182.236:
+  #vars:
+    #ansible_connection=ssh
+    #ansible_ssh_user: root
+    #ansible_ssh_pass: pass
+    #ansible_become_pass: pass
