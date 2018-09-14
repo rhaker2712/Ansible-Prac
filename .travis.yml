@@ -1,0 +1,43 @@
+# The machine is ruby based to suit cucumber/aruba
+
+language: ruby
+
+
+
+os:
+
+  - linux
+
+  - osx
+
+osx_image: xcode8
+
+
+
+rvm:
+
+  - 2.3.0
+
+
+
+install:
+
+  # Install ansible-lint to enable style testing of ansble
+
+  - pip install -I --user ansible-lint==3.4.23
+
+
+
+script:
+
+  # Test ansible style
+
+  - ./go check style
+
+  notifications:
+
+  email:
+    recipients:
+      rthaker@centiq.co.uk
+    on_success: always
+    on_failure: never
